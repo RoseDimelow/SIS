@@ -1,16 +1,29 @@
+<<<<<<< HEAD
 import java.util.Scanner;
+=======
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.ArrayList;
+>>>>>>> branch 'master' of https://github.com/MadelynMeisner/SISProject.git
 
 public class ProjectRunner 
 {
 	static String playerGuess = userInput.nextLine(); 
 	public static void main(String[] args) 
 	{
+<<<<<<< HEAD
 		//class.method
 		System.out.println("");
 		greetUser();
 		addOrDelete();
 		changeStudents();
 		sortStudents();
+=======
+
+		readTextFile();
+		
+>>>>>>> branch 'master' of https://github.com/MadelynMeisner/SISProject.git
 		//Hey everyone! If you are reading this right now, I think that we should be up to date. 
 		//I created a new class for each option of the first menu for the project
 		//here are the jobs we agreed to do:
@@ -19,6 +32,7 @@ public class ProjectRunner
 		//Thanh-Tam: work on the add/delete option
 		//Rose: create the pojo and import the text file
 	}
+<<<<<<< HEAD
 	 public static void greetUser()
 	 {
 		Scanner userInput = new Scanner (System.in);
@@ -54,5 +68,40 @@ public class ProjectRunner
 		 
 	 }
 	
+=======
+	
+	
+	
+	
+	
+	public static void readTextFile()
+	{
+		try
+		{
+		Scanner myFile = new Scanner (new File("studentList.txt"));
+		
+		ArrayList <Student> studentList = new ArrayList <Student>();
+		
+		while (myFile.hasNext())
+		{
+			studentList.add(new Student (myFile.next(), myFile.next()));
+		}
+		
+		for (Student s : studentList)
+		{
+			System.out.print(s.getFirstName() + " ");
+			System.out.println(s.getLastName());
+//			System.out.println(s.getGpa());
+
+		}
+		
+		}
+		
+		catch (IOException ex)
+		{
+			System.out.println("Sorry, an error occurred.");
+		}
+	}
+>>>>>>> branch 'master' of https://github.com/MadelynMeisner/SISProject.git
 
 }
