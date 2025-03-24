@@ -1,16 +1,19 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddOrDelete
 	{
 
-		public static void main(String[] args)
+		public static void main(String[] args) throws FileNotFoundException
 			{
 				Scanner userInput = new Scanner(System.in);
 				String defaultGrade = "[--]";
 				String defaultGPA = "0.0";
 
 				System.out.print("Student Name: ");
-				String firstName = userInput.nextLine();
+				String firstName = userInput.nextLine(); // Student parameter
 
 				System.out.print("Student Last Name: ");
 				String lastName = userInput.nextLine();
@@ -24,11 +27,18 @@ public class AddOrDelete
 				System.out.print("Period 3 Class: ");
 				String periodThreeClass = userInput.nextLine();
 
-				String[] newStudent = {firstName, lastName, periodOneClass, defaultGrade, periodTwoClass, defaultGrade, periodThreeClass, defaultGrade, defaultGPA};
-				System.out.println("Student Succesfully Added: " + firstName + " " + lastName + " " + periodOneClass + " " + periodTwoClass + " " + periodTwoClass);
+				String[] newStudent =
+					{ firstName, lastName, periodOneClass, defaultGrade, periodTwoClass, defaultGrade, periodThreeClass,
+							defaultGrade, defaultGPA };
+				
+				System.out.println("Student Succesfully Added: " + firstName + " " + lastName + " 1. " + periodOneClass
+						+ " " + defaultGrade + " 2. " + periodTwoClass + " " + defaultGrade + " 3. " + periodThreeClass + " "
+						+ defaultGrade + " " + defaultGPA);
 
-				// GPA default = 0
-				// Grade default = "[--]"
+				ArrayList<String[]> studentList = new ArrayList<>();
+				studentList.add(newStudent);
+				
+				Scanner myFile = new Scanner (new File("studentList.txt"));
 			}
 
 		public void addStudent()
@@ -53,5 +63,7 @@ public class AddOrDelete
 				System.out.print("Student Last Name: ");
 				String lastName = userInput.nextLine();
 
+				// studentList.remove(firstName);
 			}
+
 	}
