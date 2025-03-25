@@ -98,6 +98,14 @@ public class ProjectRunner
 		{
 			System.out.println("Sorry, an error occurred.");
 		}
+		
+		calculateGpa();
+	}
+	
+	//calculate the student's GPA
+	public static void calculateGpa()
+	{
+	
 	}
 
 
