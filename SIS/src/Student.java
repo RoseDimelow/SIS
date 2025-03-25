@@ -127,5 +127,26 @@ public class Student
 		public void setGpa(double gpa)
 			{
 				this.gpa = gpa;
+				
+				if (Student.getClassGrade1.contains("A"))
+				{
+					
+				}
+				
+				if (Student.getClassGrade1.contains("A"))
+				{
+					
+				}
+				
+				if (Student.getClassGrade1.contains("A"))
+				{
+					
+				}
 			}
+		
+		//calculate the student's GPA
+		public static void calculateGpa()
+		{
+			
+		}
 	}

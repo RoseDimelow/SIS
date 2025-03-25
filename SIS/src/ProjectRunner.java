@@ -81,7 +81,7 @@ public class ProjectRunner
 		
 		while (myFile.hasNext())
 		{
-			studentList.add(new Student (myFile.next(), myFile.next()));
+			studentList.add(new Student (myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next()));
 		}
 		
 		for (Student s : studentList)
