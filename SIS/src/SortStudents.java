@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Collections;
 
 public class SortStudents 
 {	
@@ -31,12 +32,17 @@ public class SortStudents
 	
 	public static void sortLastName()
 	{
+		Collections.sort(ProjectRunner.studentList, new CompareLastName());
 		
+		for (Student s : ProjectRunner.studentList)
+			{
+				System.out.println(s.getLastName());
+			}
 	}
 	
 	public static void sortGPA()
 	{
-		
+		Collections.sort(null);
 	}
 	
 	public static void sortPeriod()
