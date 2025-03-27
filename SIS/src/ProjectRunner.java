@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class ProjectRunner 
 {
+	static ArrayList <Student> studentList = new ArrayList <Student>();
 	
 	public static void main(String[] args) 
 	{
@@ -58,8 +59,26 @@ public class ProjectRunner
 	 }
 	 public static void addOrDelete()
 	 {
-		
-	 }
+		 Scanner userInput = new Scanner(System.in);
+	        
+	        System.out.println("Would you like to: ");
+	        System.out.println("1) Add a student");
+	        System.out.println("2) Delete a student");
+
+	        String choice = userInput.nextLine();
+
+	        if (choice.equals("1")) 
+	        	{
+	       
+	        		AddOrDelete.addStudent();
+	        }
+	        if (choice.equals("2")) {
+	       
+	           AddOrDelete.deleteStudent();
+	        }
+	       
+	    }
+	
 	 public static void changeStudents()
 	 {
 		 
@@ -77,7 +96,7 @@ public class ProjectRunner
 		{
 		Scanner myFile = new Scanner (new File("studentList.txt"));
 		
-		ArrayList <Student> studentList = new ArrayList <Student>();
+		
 		
 		while (myFile.hasNext())
 		{
