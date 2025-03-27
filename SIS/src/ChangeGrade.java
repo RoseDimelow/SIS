@@ -44,8 +44,6 @@ public class ChangeGrade
 			System.out.println("Please enter either a 1, 2, or 3.");
 		}
 		
-		
-		
 	}
 	
 	public static void switchClass()

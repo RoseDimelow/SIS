@@ -6,14 +6,6 @@ import java.util.Scanner;
 public class AddOrDelete
 	{
 
-		public static void main(String[] args) throws FileNotFoundException
-			{
-				addStudent();
-				
-				
-				
-			}
-
 		public static void addStudent() throws FileNotFoundException
 			{
 				Scanner userInput = new Scanner(System.in);
@@ -35,21 +27,29 @@ public class AddOrDelete
 				System.out.print("Period 3 Class: ");
 				String periodThreeClass = userInput.nextLine();
 
-				String[] newStudent =
-					{ firstName, lastName, periodOneClass, defaultGrade, periodTwoClass, defaultGrade, periodThreeClass,
-							defaultGrade, Double.toString(defaultGPA) };
-				
+      		Student student = new Student(firstName, lastName, periodOneClass, defaultGrade, periodTwoClass,
+						defaultGrade, periodThreeClass, defaultGrade, defaultGPA);
+
+				ArrayList<Student> studentList = new ArrayList<Student>();
+
+				studentList.add(student);
+
 				System.out.println("Student Succesfully Added: " + firstName + " " + lastName + " " + periodOneClass
 						+ " " + defaultGrade + " " + periodTwoClass + " " + defaultGrade + " " + periodThreeClass + " "
 						+ defaultGrade + " " + defaultGPA);
 
-				ArrayList<String[]> studentList = new ArrayList<>();
-				studentList.add(newStudent);
-				
 				Scanner myFile = new Scanner(new File("studentList.txt"));
+
+				while (myFile.hasNext())
+					{
+						studentList.add(new Student(myFile.next(), myFile.next(), myFile.next(), myFile.next(),
+								myFile.next(), myFile.next(), myFile.next(), myFile.next(), 0.0));
+					}
+
 			}
 
-		public static void deleteStudent()
+		public static void deleteStudent()  throws FileNotFoundException
+
 			{
 				Scanner userInput = new Scanner(System.in);
 
@@ -59,7 +59,28 @@ public class AddOrDelete
 				System.out.print("Student Last Name: ");
 				String lastName = userInput.nextLine();
 
-				// studentList.remove(firstName);
+
+				ArrayList<Student> studentList = new ArrayList<Student>();
+
+				Scanner myFile = new Scanner(new File("studentList.txt"));
+
+				while (myFile.hasNext())
+					{
+						studentList.add(new Student(myFile.next(), myFile.next(), myFile.next(), myFile.next(),
+								myFile.next(), myFile.next(), myFile.next(), myFile.next(), 0.0));
+					}
+
+				for (int i = 0; i < studentList.size(); i++)
+					{
+						if (studentList.get(i).getFirstName().equals(firstName)
+								&& studentList.get(i).getLastName().equals(lastName))
+							{
+								studentList.remove(studentList.get(i));
+							}
+					}
+
+				System.out.println(firstName + " " + lastName + " successfully removed.");
+
 			}
 
 	}

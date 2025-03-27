@@ -7,12 +7,13 @@ import java.util.ArrayList;
 
 public class ProjectRunner 
 {
+	//hi
+
 	static ArrayList <Student> studentList = new ArrayList <Student>();
+
 	
 	public static void main(String[] args) 
 	{
-
-		//class.method
 		//System.out.println("");
 		//readTextFile();
 		greetUser();
@@ -21,10 +22,7 @@ public class ProjectRunner
 		sortStudents();
 		readTextFile();
 		
-
-		
 	}
-
 	 public static void greetUser()
 	 {
 		Scanner userInput = new Scanner (System.in);
@@ -46,48 +44,73 @@ public class ProjectRunner
 	    	{
 	    		sortStudents();
 	    	}
-	    // sayas a b or c 
-//		What would you like to do?
-//		add or delete a student - need add/delete methods and classes
-//		addStudent()
-//		deleteStudent()
-//		change student grades/schedule - need a class & methods
-//		changeStudentGrades()
-//		changeStudentSchedule()
-//		sort students - need a class & methods
-//		sortStudents()
 
 	 }
+	 
 	 public static void addOrDelete()
 	 {
-		 Scanner userInput = new Scanner(System.in);
-	        
-	        System.out.println("Would you like to: ");
-	        System.out.println("1) Add a student");
-	        System.out.println("2) Delete a student");
+		Scanner userInput = new Scanner(System.in);
+        System.out.println("Would you like to: ");
+        System.out.println("1) Add a student");
+        System.out.println("2) Delete a student");
 
-	        String choice = userInput.nextLine();
-
-	        if (choice.equals("1")) 
-	        	{
-	       
-	        		AddOrDelete.addStudent();
-	        }
-	        if (choice.equals("2")) {
-	       
-	           AddOrDelete.deleteStudent();
-	        }
-	       
-	    }
+        String choice = userInput.nextLine();
+        
+        if (choice.equals("1"))
+        {
+            AddOrDelete.addStudent();
+        }
+        if (choice.equals("2"))
+        {
+        	AddOrDelete.deleteStudent();
+        }
+	 
+		       
+	 }
 	
 	 public static void changeStudents()
 	 {
-		 
+		Scanner userInput = new Scanner(System.in);
+        System.out.println("Would you like to: ");
+        System.out.println("1) Change a student's grade");
+        System.out.println("2) Switch a student's class");
+        
+        String choice = userInput.nextLine();
+        
+        if (choice.equals("1"))
+        {
+            // Call method 
+            
+        }
+        if (choice.equals("2"))
+        {
+            // Call method 
+            
+        }
 	 }
 	 public static void sortStudents()
 	 {
-		 SortStudents.sortLastName();
-	 }
+		Scanner userInput = new Scanner(System.in);
+        System.out.println("How would you like to organize the students?");
+        System.out.println("1) Sort by Last Name");
+        System.out.println("2) Sort by GPA");
+        System.out.println("3) Sort by Period");
+        
+        String choice = userInput.nextLine();
+        
+        if (choice.equals("1"))
+        {
+            SortStudents.sortLastName();
+        }
+        if (choice.equals("2"))
+        {
+            SortStudents.sortGPA();
+        }
+        if (choice.equals("3"))
+        {
+            SortStudents.sortPeriod();
+        }
+ }
 	
 	
 	
@@ -101,7 +124,7 @@ public class ProjectRunner
 		
 		while (myFile.hasNext())
 		{
-			studentList.add(new Student (myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), -1.0));
+			studentList.add(new Student (myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), 0.0));
 		}
 		
 		for (Student s : studentList)
