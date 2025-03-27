@@ -1,26 +1,93 @@
+
+import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.ArrayList;
+
 
 public class ProjectRunner 
 {
-
+	static ArrayList <Student> studentList = new ArrayList <Student>();
+	
 	public static void main(String[] args) 
 	{
 
+		//class.method
+		//System.out.println("");
+		//readTextFile();
+		greetUser();
+		addOrDelete();
+		changeStudents();
+		sortStudents();
 		readTextFile();
 		
-		//Hey everyone! If you are reading this right now, I think that we should be up to date. 
-		//I created a new class for each option of the first menu for the project
-		//here are the jobs we agreed to do:
-		//Aisley: work on the sort students menu option
-		//Madeline: make the main menu- you might want to make your own class for this part instead of putting it all in the project runner class
-		//Thanh-Tam: work on the add/delete option
-		//Rose: create the pojo and import the text file
+
+		
 	}
+
+	 public static void greetUser()
+	 {
+		Scanner userInput = new Scanner (System.in);
+		System.out.println("Hello! I hope you have had a splendid day!");
+		System.out.println("What would you like to do?");
+		System.out.println("a) add or delete a student");
+		System.out.println("b) change student grades/schedule");
+		System.out.println("c) sort students");
+	    String playerGuess = userInput.nextLine(); 
+	    if(playerGuess.equals("a") || playerGuess.equals("a)"))
+	    	{
+	    		addOrDelete();
+	    	}
+	    if(playerGuess.equals("b") || playerGuess.equals("b)"))
+	    	{
+	    		changeStudents();
+	    	}
+	    if(playerGuess.equals("c") || playerGuess.equals("c)"))
+	    	{
+	    		sortStudents();
+	    	}
+	    // sayas a b or c 
+//		What would you like to do?
+//		add or delete a student - need add/delete methods and classes
+//		addStudent()
+//		deleteStudent()
+//		change student grades/schedule - need a class & methods
+//		changeStudentGrades()
+//		changeStudentSchedule()
+//		sort students - need a class & methods
+//		sortStudents()
+
+	 }
+	 public static void addOrDelete()
+	 {
+		 Scanner userInput = new Scanner(System.in);
+	        
+	        System.out.println("Would you like to: ");
+	        System.out.println("1) Add a student");
+	        System.out.println("2) Delete a student");
+
+	        String choice = userInput.nextLine();
+
+	        if (choice.equals("1")) 
+	        	{
+	       
+	        		AddOrDelete.addStudent();
+	        }
+	        if (choice.equals("2")) {
+	       
+	           AddOrDelete.deleteStudent();
+	        }
+	       
+	    }
 	
-	
+	 public static void changeStudents()
+	 {
+		 
+	 }
+	 public static void sortStudents()
+	 {
+		 SortStudents.sortLastName();
+	 }
 	
 	
 	
@@ -30,17 +97,24 @@ public class ProjectRunner
 		{
 		Scanner myFile = new Scanner (new File("studentList.txt"));
 		
-		ArrayList <Student> studentList = new ArrayList <Student>();
+		
 		
 		while (myFile.hasNext())
 		{
-			studentList.add(new Student (myFile.next(), myFile.next()));
+			studentList.add(new Student (myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), -1.0));
 		}
 		
 		for (Student s : studentList)
 		{
 			System.out.print(s.getFirstName() + " ");
-			System.out.println(s.getLastName());
+			System.out.println(s.getLastName() + " ");
+//			System.out.println(s.getClass1() + " ");
+//			System.out.println(s.getClassGrade1() + " ");
+//			System.out.println(s.getClass2() + " ");
+//			System.out.println(s.getClassGrade1() + " ");
+//			System.out.println(s.getClass3() + " ");
+//			System.out.println(s.getClassGrade3() + " ");
+
 //			System.out.println(s.getGpa());
 
 		}
@@ -51,6 +125,15 @@ public class ProjectRunner
 		{
 			System.out.println("Sorry, an error occurred.");
 		}
+		
+		calculateGpa();
 	}
+	
+	//calculate the student's GPA
+	public static void calculateGpa()
+	{
+	
+	}
+
 
 }
