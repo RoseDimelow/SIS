@@ -46,7 +46,7 @@ public class AddOrDelete
 				ArrayList<String[]> studentList = new ArrayList<>();
 				studentList.add(newStudent);
 				
-				Scanner myFile = new Scanner(new File("studentList.txt"));
+				Scanner myFile = new Scanner (new File("studentList.txt"));
 			}
 
 		public static void deleteStudent()
