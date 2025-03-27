@@ -8,9 +8,17 @@ public class AddOrDelete
 
 		public static void main(String[] args) throws FileNotFoundException
 			{
+				addStudent();
+				
+				
+				
+			}
+
+		public static void addStudent() throws FileNotFoundException
+			{
 				Scanner userInput = new Scanner(System.in);
 				String defaultGrade = "[--]";
-				String defaultGPA = "0.0";
+				double defaultGPA = 0.0;
 
 				System.out.print("Student Name: ");
 				String firstName = userInput.nextLine(); // Student parameter
@@ -29,29 +37,18 @@ public class AddOrDelete
 
 				String[] newStudent =
 					{ firstName, lastName, periodOneClass, defaultGrade, periodTwoClass, defaultGrade, periodThreeClass,
-							defaultGrade, defaultGPA };
+							defaultGrade, Double.toString(defaultGPA) };
 				
-				System.out.println("Student Succesfully Added: " + firstName + " " + lastName + " 1. " + periodOneClass
-						+ " " + defaultGrade + " 2. " + periodTwoClass + " " + defaultGrade + " 3. " + periodThreeClass + " "
+				System.out.println("Student Succesfully Added: " + firstName + " " + lastName + " " + periodOneClass
+						+ " " + defaultGrade + " " + periodTwoClass + " " + defaultGrade + " " + periodThreeClass + " "
 						+ defaultGrade + " " + defaultGPA);
 
 				ArrayList<String[]> studentList = new ArrayList<>();
 				studentList.add(newStudent);
 				
-				Scanner myFile = new Scanner (new File("studentList.txt"));
+				Scanner myFile = new Scanner(new File("studentList.txt"));
 			}
 
-//		public static void addStudent()
-//			{
-//				Scanner userInput = new Scanner(System.in);
-//				System.out.print("Student Name: ");
-//				System.out.println(userInput);
-//				// declare a scanner variable for student name and instantiate to whatever the
-//				// user inputs
-//				// need first name, last name, GPA (this will need to be calculated), and three
-//				// courses which include the period, class name and current letter grade.
-//				// adds a student
-//			}
 
 		public static void deleteStudent()
 			{
