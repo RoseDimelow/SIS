@@ -41,7 +41,7 @@ public class AddOrDelete
 				Scanner myFile = new Scanner (new File("studentList.txt"));
 			}
 
-		public void addStudent()
+		public static void addStudent()
 			{
 				Scanner userInput = new Scanner(System.in);
 				System.out.print("Student Name: ");
@@ -53,7 +53,7 @@ public class AddOrDelete
 				// adds a student
 			}
 
-		public void deleteStudent()
+		public static void deleteStudent()
 			{
 				Scanner userInput = new Scanner(System.in);
 
