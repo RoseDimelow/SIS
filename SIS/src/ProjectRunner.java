@@ -1,6 +1,7 @@
 
 import java.util.Scanner;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -11,10 +12,10 @@ public class ProjectRunner
 	static ArrayList <Student> studentList = new ArrayList <Student>();
 
 	
-	public static void main(String[] args) 
+	public static void main(String[] args) throws FileNotFoundException 
 	{
 		//System.out.println("");
-		//readTextFile();
+		readTextFile();
 		greetUser();
 		addOrDelete();
 		changeStudents();
@@ -22,7 +23,7 @@ public class ProjectRunner
 		readTextFile();
 		
 	}
-	 public static void greetUser()
+	 public static void greetUser() throws FileNotFoundException
 	 {
 		Scanner userInput = new Scanner (System.in);
 		System.out.println("Hello! I hope you have had a splendid day!");
@@ -46,7 +47,7 @@ public class ProjectRunner
 
 	 }
 	 
-	 public static void addOrDelete()
+	 public static void addOrDelete() throws FileNotFoundException
 	 {
 		Scanner userInput = new Scanner(System.in);
         System.out.println("Would you like to: ");
@@ -78,12 +79,12 @@ public class ProjectRunner
         
         if (choice.equals("1"))
         {
-            // Call method 
+            ChangeGrade.changeGrade();
             
         }
         if (choice.equals("2"))
         {
-            // Call method 
+        	 ChangeGrade.switchClass();
             
         }
 	 }
