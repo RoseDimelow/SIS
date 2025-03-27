@@ -7,7 +7,9 @@ import java.util.ArrayList;
 
 public class ProjectRunner 
 {
+
 	static ArrayList <Student> studentList = new ArrayList <Student>();
+
 	
 	public static void main(String[] args) 
 	{
@@ -20,7 +22,6 @@ public class ProjectRunner
 		readTextFile();
 		
 	}
-
 	 public static void greetUser()
 	 {
 		Scanner userInput = new Scanner (System.in);
@@ -122,7 +123,7 @@ public class ProjectRunner
 		
 		while (myFile.hasNext())
 		{
-			studentList.add(new Student (myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), -1.0));
+			studentList.add(new Student (myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), 0.0));
 		}
 		
 		for (Student s : studentList)
