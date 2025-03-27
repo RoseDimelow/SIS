@@ -1,5 +1,7 @@
 import java.util.Scanner;
+
 import java.util.Collections;
+
 
 public class SortStudents 
 {	
@@ -38,6 +40,7 @@ public class SortStudents
 			{
 				System.out.println(s.getLastName());
 			}
+
 	}
 	
 	public static void sortGPA()
