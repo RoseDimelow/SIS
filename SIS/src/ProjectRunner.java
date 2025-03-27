@@ -14,6 +14,7 @@ public class ProjectRunner
 
 		//class.method
 		//System.out.println("");
+		//readTextFile();
 		greetUser();
 		addOrDelete();
 		changeStudents();
@@ -100,13 +101,20 @@ public class ProjectRunner
 		
 		while (myFile.hasNext())
 		{
-			studentList.add(new Student (myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next()));
+			studentList.add(new Student (myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), -1.0));
 		}
 		
 		for (Student s : studentList)
 		{
 			System.out.print(s.getFirstName() + " ");
-			System.out.println(s.getLastName());
+			System.out.println(s.getLastName() + " ");
+//			System.out.println(s.getClass1() + " ");
+//			System.out.println(s.getClassGrade1() + " ");
+//			System.out.println(s.getClass2() + " ");
+//			System.out.println(s.getClassGrade1() + " ");
+//			System.out.println(s.getClass3() + " ");
+//			System.out.println(s.getClassGrade3() + " ");
+
 //			System.out.println(s.getGpa());
 
 		}
