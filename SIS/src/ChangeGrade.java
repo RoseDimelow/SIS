@@ -5,7 +5,7 @@ public class ChangeGrade
 {
 	//hey, I'm going to work on this one- Rose
 	
-	Scanner userInput = new Scanner(System.in);
+	static Scanner userInput = new Scanner(System.in);
 	
 	
 	public static void changeGrade()
@@ -13,13 +13,16 @@ public class ChangeGrade
 		System.out.println("Whose grade would you like to change?");
 		String selectedStudent = userInput.nextLine();  
 		
-		selectedStudent.get
+		System.out.println(selectedStudent.getClass1Grade());
+		
 	}
 	
 	public static void switchClass()
 	{
 		
 	}
+	
+	
 	
 
 }
