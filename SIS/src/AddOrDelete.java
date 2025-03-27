@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class AddOrDelete
 	{
-		
+
 		public static void addStudent() throws FileNotFoundException
 			{
 				Scanner userInput = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class AddOrDelete
 				System.out.print("Period 3 Class: ");
 				String periodThreeClass = userInput.nextLine();
 
-				Student student = new Student(firstName, lastName, periodOneClass, defaultGrade, periodTwoClass,
+      		Student student = new Student(firstName, lastName, periodOneClass, defaultGrade, periodTwoClass,
 						defaultGrade, periodThreeClass, defaultGrade, defaultGPA);
 
 				ArrayList<Student> studentList = new ArrayList<Student>();
@@ -48,7 +48,8 @@ public class AddOrDelete
 
 			}
 
-		public static void deleteStudent() throws FileNotFoundException
+		public static void deleteStudent()  throws FileNotFoundException
+
 			{
 				Scanner userInput = new Scanner(System.in);
 
@@ -57,6 +58,7 @@ public class AddOrDelete
 
 				System.out.print("Student Last Name: ");
 				String lastName = userInput.nextLine();
+
 
 				ArrayList<Student> studentList = new ArrayList<Student>();
 
@@ -78,6 +80,7 @@ public class AddOrDelete
 					}
 
 				System.out.println(firstName + " " + lastName + " successfully removed.");
+
 			}
 
 	}
