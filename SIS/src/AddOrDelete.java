@@ -12,7 +12,7 @@ public class AddOrDelete
 				String defaultGrade = "[--]";
 				double defaultGPA = 0.0;
 
-				System.out.print("Student Name: ");
+				System.out.print("Student First Name: ");
 				String firstName = userInput.nextLine(); // Student parameter
 
 				System.out.print("Student Last Name: ");
@@ -34,9 +34,9 @@ public class AddOrDelete
 
 				studentList.add(student);
 
-				System.out.println("Student Succesfully Added: " + firstName + " " + lastName + " " + periodOneClass
-						+ " " + defaultGrade + " " + periodTwoClass + " " + defaultGrade + " " + periodThreeClass + " "
-						+ defaultGrade + " " + defaultGPA);
+				System.out.println("Student Succesfully Added: " + firstName + " " + lastName + " First Period Class: " + periodOneClass
+						+ " Grade: " + defaultGrade + " Second Period Class: " + periodTwoClass + " " + defaultGrade + " Third Period Class: " + periodThreeClass + " Grade: "
+						+ defaultGrade + " GPA: " + defaultGPA);
 
 				Scanner myFile = new Scanner(new File("studentList.txt"));
 
@@ -53,7 +53,7 @@ public class AddOrDelete
 			{
 				Scanner userInput = new Scanner(System.in);
 
-				System.out.print("Student Name: ");
+				System.out.print("Student First Name: ");
 				String firstName = userInput.nextLine();
 
 				System.out.print("Student Last Name: ");
