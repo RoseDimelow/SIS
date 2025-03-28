@@ -15,8 +15,9 @@ public class ProjectRunner
 	public static void main(String[] args) throws FileNotFoundException 
 	{
 		//System.out.println("");
-		readTextFile();
+		
 		greetUser();
+		readTextFile();
 		addOrDelete();
 		changeStudents();
 		sortStudents();
@@ -75,14 +76,14 @@ public class ProjectRunner
         System.out.println("1) Change a student's grade");
         System.out.println("2) Switch a student's class");
         
-        String choice = userInput.nextLine();
+        String choice1 = userInput.nextLine();
         
-        if (choice.equals("1"))
+        if (choice1.equals("1"))
         {
             ChangeGrade.changeGrade();
             
         }
-        if (choice.equals("2"))
+        if (choice1.equals("2"))
         {
         	 ChangeGrade.switchClass();
             
@@ -96,17 +97,17 @@ public class ProjectRunner
         System.out.println("2) Sort by GPA");
         System.out.println("3) Sort by Period");
         
-        String choice = userInput.nextLine();
+        String choice2 = userInput.nextLine();
         
-        if (choice.equals("1"))
+        if (choice2.equals("1"))
         {
             SortStudents.sortLastName();
         }
-        if (choice.equals("2"))
+        if (choice2.equals("2"))
         {
             SortStudents.sortGPA();
         }
-        if (choice.equals("3"))
+        if (choice2.equals("3"))
         {
             SortStudents.sortPeriod();
         }
@@ -129,8 +130,8 @@ public class ProjectRunner
 		
 		for (Student s : studentList)
 		{
-			System.out.print(s.getFirstName() + " ");
-			System.out.println(s.getLastName() + " ");
+//			System.out.print(s.getFirstName() + " ");
+//			System.out.println(s.getLastName() + " ");
 //			System.out.println(s.getClass1() + " ");
 //			System.out.println(s.getClassGrade1() + " ");
 //			System.out.println(s.getClass2() + " ");
