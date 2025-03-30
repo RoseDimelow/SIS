@@ -15,6 +15,7 @@ public class ProjectRunner
 	public static void main(String[] args) throws FileNotFoundException 
 	{
 		readTextFile();
+		calculateGpa();
 		greetUser();
 //		addOrDelete();
 //		changeStudents();
@@ -150,9 +151,99 @@ public class ProjectRunner
 	}
 	
 	//calculate the student's GPA
-	public static void calculateGpa()
+	 public static void calculateGpa()
 	{
 	
+		for (int i = 0; i < studentList.size(); i++)
+		{
+			String firstGrade = studentList.get(i).getClassGrade1();
+			String secondGrade = studentList.get(i).getClassGrade2();
+			String thirdGrade = studentList.get(i).getClassGrade3();
+			
+			double gPA = 0.0;
+			
+			//P1
+			if(firstGrade.contains("A"))
+			{
+				gPA = gPA + 4.0;
+			}
+			
+			else if (firstGrade.contains("B"))
+			{
+				gPA = gPA + 3.0;
+
+			}
+			
+			else if (firstGrade.contains("C"))
+			{
+				gPA = gPA + 2.0;
+
+			}
+			
+			else if (firstGrade.contains("D"))
+			{
+				gPA = gPA + 1.0;
+
+			}
+			
+			//P2
+			if(secondGrade.contains("A"))
+			{
+				gPA = gPA + 4.0;
+			}
+			
+			else if (secondGrade.contains("B"))
+			{
+				gPA = gPA + 3.0;
+
+			}
+			
+			else if (secondGrade.contains("C"))
+			{
+				gPA = gPA + 2.0;
+
+			}
+			
+			else if (secondGrade.contains("D"))
+			{
+				gPA = gPA + 1.0;
+
+			}
+			
+			//P3
+			if(thirdGrade.contains("A"))
+			{
+				gPA = gPA + 4.0;
+			}
+			
+			else if (thirdGrade.contains("B"))
+			{
+				gPA = gPA + 3.0;
+
+			}
+			
+			else if (thirdGrade.contains("C"))
+			{
+				gPA = gPA + 2.0;
+
+			}
+			
+			else if (thirdGrade.contains("D"))
+			{
+				gPA = gPA + 1.0;
+
+			}
+			
+			gPA = gPA/3.0;
+			gPA = (int) (gPA * 10) / 10.0;
+			
+			//System.out.println(gPA);
+			
+			studentList.get(i).setGpa(gPA);
+			
+			//System.out.println(studentList.get(i).getGpa());
+
+		}
 	}
 
 
