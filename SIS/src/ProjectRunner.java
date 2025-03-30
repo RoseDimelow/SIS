@@ -8,22 +8,18 @@ import java.util.ArrayList;
 
 public class ProjectRunner 
 {
-	//hi
 
 	static ArrayList <Student> studentList = new ArrayList <Student>();
 
 	
 	public static void main(String[] args) throws FileNotFoundException 
 	{
-		//System.out.println("");
-		
+		readTextFile();
 		greetUser();
-		readTextFile();
-		addOrDelete();
-		changeStudents();
-		sortStudents();
-		readTextFile();
-		
+//		addOrDelete();
+//		changeStudents();
+//		sortStudents();
+//		readTextFile();	
 	}
 	 public static void greetUser() throws FileNotFoundException
 	 {
@@ -90,6 +86,7 @@ public class ProjectRunner
             
         }
 	 }
+	 
 	 public static void sortStudents()
 	 {
 		Scanner userInput = new Scanner(System.in);
@@ -114,9 +111,7 @@ public class ProjectRunner
         }
  }
 	
-	
-	
-	public static void readTextFile()
+	 public static void readTextFile()
 	{
 		try
 		{
