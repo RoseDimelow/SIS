@@ -38,7 +38,7 @@ public class SortStudents
 		
 		for (Student s : ProjectRunner.studentList)
 			{
-				System.out.println(s.getLastName());
+				System.out.println(s.getLastName() + ", " + s.getFirstName());
 			}
 
 	}
@@ -49,7 +49,7 @@ Collections.sort(ProjectRunner.studentList, new CompareGPA());
 		
 		for (Student g : ProjectRunner.studentList)
 			{
-				System.out.println(g.getGpa());
+				System.out.println(g.getGpa() +" " + g.getLastName() + ", " + g.getFirstName());
 			}
 		
 	}
@@ -59,9 +59,9 @@ Collections.sort(ProjectRunner.studentList, new CompareGPA());
 		Scanner userIntInput = new Scanner(System.in);
 		
 		System.out.println("What period do you want to sort by?");
-		System.out.println("1. Algebra");
-		System.out.println("2. Biology");
-		System.out.println("3. English");
+		System.out.println("1. Period 1");
+		System.out.println("2. Period 2");
+		System.out.println("3. Period 3");
 		
 		int answer1 = userIntInput.nextInt();
 		
@@ -88,7 +88,7 @@ Collections.sort(ProjectRunner.studentList, new CompareGPA());
 		for (Student m : ProjectRunner.studentList)
 			
 			{
-				System.out.println(m.getClass1());
+				System.out.println(m.getClass1() + " " + m.getLastName() + ", " + m.getFirstName());
 			}
 			
 	}
@@ -99,7 +99,7 @@ Collections.sort(ProjectRunner.studentList, new CompareGPA());
 			
 		for (Student b : ProjectRunner.studentList)
 			{
-				System.out.println(b.getClass2());
+				System.out.println(b.getClass2() + " " + b.getLastName() + ", " + b.getFirstName());
 			}
 	}
 	
@@ -110,7 +110,7 @@ Collections.sort(ProjectRunner.studentList, new CompareGPA());
 		
 		for (Student e : ProjectRunner.studentList)
 			{
-				System.out.println(e.getClass3());
+				System.out.println(e.getClass3() + " " + e.getLastName() + ", " + e.getFirstName());
 			}
 	}
 }
