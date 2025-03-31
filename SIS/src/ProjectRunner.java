@@ -118,8 +118,6 @@ public class ProjectRunner
 		{
 		Scanner myFile = new Scanner (new File("studentList.txt"));
 		
-		
-		
 		while (myFile.hasNext())
 		{
 			studentList.add(new Student (myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), 0.0));
@@ -150,6 +148,13 @@ public class ProjectRunner
 		calculateGpa();
 	}
 	
+	 public static void printList()
+	 {
+		 for (int i = 0; i < studentList.size(); i++)
+		 {
+			 System.out.println( (i+1) + ") " + studentList.get(i).getFirstName() +" "+ studentList.get(i).getLastName());
+		 }
+	 }
 	//calculate the student's GPA
 	 public static void calculateGpa()
 	{
