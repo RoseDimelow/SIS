@@ -13,7 +13,7 @@ public class ChangeGrade
 		System.out.println();
 
 		System.out.println("Whose grade would you like to change? Please type in the student's number:");
-		int selectedStudent = userInput.nextInt() +1;
+		int selectedStudent = userInput.nextInt() -1;
 		
 		ProjectRunner.studentList.get(selectedStudent);
 		
@@ -71,7 +71,7 @@ public class ChangeGrade
 		System.out.println();
 		
 		System.out.println("Whose class would you like to change? Please type in the student's number:");
-		int selectedStudent = userInput.nextInt() +1;
+		int selectedStudent = userInput.nextInt() -1;
 		
 		ProjectRunner.studentList.get(selectedStudent);
 		

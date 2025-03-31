@@ -123,21 +123,6 @@ public class ProjectRunner
 			studentList.add(new Student (myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), 0.0));
 		}
 		
-		for (Student s : studentList)
-		{
-//			System.out.print(s.getFirstName() + " ");
-//			System.out.println(s.getLastName() + " ");
-//			System.out.println(s.getClass1() + " ");
-//			System.out.println(s.getClassGrade1() + " ");
-//			System.out.println(s.getClass2() + " ");
-//			System.out.println(s.getClassGrade1() + " ");
-//			System.out.println(s.getClass3() + " ");
-//			System.out.println(s.getClassGrade3() + " ");
-
-//			System.out.println(s.getGpa());
-
-		}
-		
 		}
 		
 		catch (IOException ex)
@@ -152,7 +137,8 @@ public class ProjectRunner
 	 {
 		 for (int i = 0; i < studentList.size(); i++)
 		 {
-			 System.out.println( (i+1) + ") " + studentList.get(i).getFirstName() +" "+ studentList.get(i).getLastName());
+			 int n = i+1;
+			 System.out.println( n + ") " + studentList.get(i).getFirstName() +" "+ studentList.get(i).getLastName());
 		 }
 	 }
 	//calculate the student's GPA
