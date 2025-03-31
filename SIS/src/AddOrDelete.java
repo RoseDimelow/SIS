@@ -12,6 +12,10 @@ public class AddOrDelete
 				String defaultGrade = "[--]";
 				double defaultGPA = 0.0;
 
+				System.out.println();
+				ProjectRunner.printList();
+				System.out.println();
+				
 				System.out.print("Student First Name: ");
 				String firstName = userInput.nextLine(); // Student parameter
 
@@ -53,6 +57,10 @@ public class AddOrDelete
 
 			{
 				Scanner userInput = new Scanner(System.in);
+				
+				System.out.println();
+				ProjectRunner.printList();
+				System.out.println();
 
 				System.out.print("Student First Name: ");
 				String firstName = userInput.nextLine();
