@@ -38,7 +38,7 @@ public class SortStudents
 		
 		for (Student s : ProjectRunner.studentList)
 			{
-				System.out.println(s.getLastName());
+				System.out.println(s.getFirstName() + " " + s.getLastName());
 			}
 
 	}
@@ -49,7 +49,7 @@ Collections.sort(ProjectRunner.studentList, new CompareGPA());
 		
 		for (Student g : ProjectRunner.studentList)
 			{
-				System.out.println(g.getGpa());
+				System.out.println(g.getFirstName() + " " + g.getLastName() + " " + g.getGpa());
 			}
 		
 	}
@@ -88,18 +88,18 @@ Collections.sort(ProjectRunner.studentList, new CompareGPA());
 		for (Student m : ProjectRunner.studentList)
 			
 			{
-				System.out.println(m.getClass1());
+				System.out.println(m.getFirstName() + " " + m.getLastName() + " " + m.getClass1());
 			}
 			
 	}
 	
 	public static void sortScience()
 	{
-		Collections.sort(ProjectRunner.studentList, new ComapreScience());
+		Collections.sort(ProjectRunner.studentList, new CompareScience());
 			
 		for (Student b : ProjectRunner.studentList)
 			{
-				System.out.println(b.getClass2());
+				System.out.println(b.getFirstName() + " " + b.getLastName() + " " + b.getClass2());
 			}
 	}
 	
@@ -110,7 +110,7 @@ Collections.sort(ProjectRunner.studentList, new CompareGPA());
 		
 		for (Student e : ProjectRunner.studentList)
 			{
-				System.out.println(e.getClass3());
+				System.out.println(e.getFirstName() + " " + e.getLastName() + " " + e.getClass3());
 			}
 	}
 }
