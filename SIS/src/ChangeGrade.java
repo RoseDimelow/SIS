@@ -33,7 +33,7 @@ public class ChangeGrade
 			String newGrade = userChoice.nextLine();
 
 			ProjectRunner.studentList.get(selectedStudent).setClassGrade1(newGrade);
-			System.out.println(ProjectRunner.studentList.get(selectedStudent).getFirstName()+"'s grade is now "+ProjectRunner.studentList.get(selectedStudent).getClassGrade1()+".");
+			System.out.println(ProjectRunner.studentList.get(selectedStudent).getFirstName()+"'s " + ProjectRunner.studentList.get(selectedStudent).getClass1() + " grade is now " + ProjectRunner.studentList.get(selectedStudent).getClassGrade1()+".");
 		}
 		
 		else if (selectedClass == 2)
@@ -43,7 +43,7 @@ public class ChangeGrade
 			String newGrade = userChoice.nextLine();
 			
 			ProjectRunner.studentList.get(selectedStudent).setClassGrade2(newGrade);
-			System.out.println(ProjectRunner.studentList.get(selectedStudent).getFirstName()+"'s grade is now "+ProjectRunner.studentList.get(selectedStudent).getClassGrade2()+".");
+			System.out.println(ProjectRunner.studentList.get(selectedStudent).getFirstName()+"'s " + ProjectRunner.studentList.get(selectedStudent).getClass2() + " grade is now "+ProjectRunner.studentList.get(selectedStudent).getClassGrade2()+".");
 		}
 		
 		else if (selectedClass == 3)
@@ -53,7 +53,7 @@ public class ChangeGrade
 			String newGrade = userChoice.nextLine();
 			
 			ProjectRunner.studentList.get(selectedStudent).setClassGrade3(newGrade);
-			System.out.println(ProjectRunner.studentList.get(selectedStudent).getFirstName()+"'s grade is now "+ProjectRunner.studentList.get(selectedStudent).getClassGrade3()+".");
+			System.out.println(ProjectRunner.studentList.get(selectedStudent).getFirstName()+"'s " + ProjectRunner.studentList.get(selectedStudent).getClass3() + " grade is now "+ProjectRunner.studentList.get(selectedStudent).getClassGrade3()+".");
 		}
 		
 		else
@@ -91,7 +91,7 @@ public class ChangeGrade
 			String newClass = userChoice.nextLine();
 
 			ProjectRunner.studentList.get(selectedStudent).setClass1(newClass);
-			System.out.println(ProjectRunner.studentList.get(selectedStudent).getFirstName()+"'s class is now "+ProjectRunner.studentList.get(selectedStudent).getClass1()+".");
+			System.out.println(ProjectRunner.studentList.get(selectedStudent).getFirstName()+"'s first period class is now "+ProjectRunner.studentList.get(selectedStudent).getClass1()+".");
 		}
 		
 		else if (selectedClass == 2)
@@ -101,7 +101,7 @@ public class ChangeGrade
 			String newClass = userChoice.nextLine();
 
 			ProjectRunner.studentList.get(selectedStudent).setClass2(newClass);
-			System.out.println(ProjectRunner.studentList.get(selectedStudent).getFirstName()+"'s class is now "+ProjectRunner.studentList.get(selectedStudent).getClass2()+".");
+			System.out.println(ProjectRunner.studentList.get(selectedStudent).getFirstName()+"'s second period class is now "+ProjectRunner.studentList.get(selectedStudent).getClass2()+".");
 		}
 		
 		else if (selectedClass == 3)
@@ -111,7 +111,7 @@ public class ChangeGrade
 			String newClass = userChoice.nextLine();
 
 			ProjectRunner.studentList.get(selectedStudent).setClass3(newClass);
-			System.out.println(ProjectRunner.studentList.get(selectedStudent).getFirstName()+"'s class is now "+ProjectRunner.studentList.get(selectedStudent).getClass3()+".");
+			System.out.println(ProjectRunner.studentList.get(selectedStudent).getFirstName()+"'s third period class is now "+ProjectRunner.studentList.get(selectedStudent).getClass3()+".");
 		}
 		
 		else
