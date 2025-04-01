@@ -13,7 +13,7 @@ public class AddOrDelete
 				double defaultGPA = 0.0;
 
 				System.out.print("Student First Name: ");
-				String firstName = userInput.nextLine(); // Student parameter
+				String firstName = userInput.nextLine();
 
 				System.out.print("Student Last Name: ");
 				String lastName = userInput.nextLine();
@@ -27,60 +27,38 @@ public class AddOrDelete
 				System.out.print("Period 3 Class: ");
 				String periodThreeClass = userInput.nextLine();
 
-      		Student student = new Student(firstName, lastName, periodOneClass, defaultGrade, periodTwoClass,
+				Student student = new Student(firstName, lastName, periodOneClass, defaultGrade, periodTwoClass,
 						defaultGrade, periodThreeClass, defaultGrade, defaultGPA);
 
-				ArrayList<Student> studentList = new ArrayList<Student>();
+				ProjectRunner.studentList.add(student);
 
-				studentList.add(student);
+				System.out.println("\nStudent Succesfully Added: " + firstName + " " + lastName + " " + periodOneClass
+						+ " " + defaultGrade + " " + periodTwoClass + " " + defaultGrade + " " + periodThreeClass + " "
+						+ defaultGrade + " " + defaultGPA + "\n");
 
-				System.out.println("Student Succesfully Added: " + firstName + " " + lastName + " First Period Class: " + periodOneClass
-						+ " Grade: " + defaultGrade + " Second Period Class: " + periodTwoClass + " " + defaultGrade + " Third Period Class: " + periodThreeClass + " Grade: "
-						+ defaultGrade + " GPA: " + defaultGPA);
-
-				Scanner myFile = new Scanner(new File("studentList.txt"));
-
-				while (myFile.hasNext())
-					{
-						studentList.add(new Student(myFile.next(), myFile.next(), myFile.next(), myFile.next(),
-								myFile.next(), myFile.next(), myFile.next(), myFile.next(), 0.0));
-					}
+				// ProjectRunner.readTextFile();
+				// ProjectRunner.printList();
 
 			}
 
-
-		public static void deleteStudent()  throws FileNotFoundException
+		public static void deleteStudent() throws FileNotFoundException
 
 			{
 				Scanner userInput = new Scanner(System.in);
 
-				System.out.print("Student First Name: ");
-				String firstName = userInput.nextLine();
+				System.out.println("Which student would you like to delete?\n");
+				ProjectRunner.readTextFile();
+				ProjectRunner.printList();
 
-				System.out.print("Student Last Name: ");
-				String lastName = userInput.nextLine();
+				int studentToBeDeleted = userInput.nextInt();
 
+				String deletedStudentFirstName = ProjectRunner.studentList.get(studentToBeDeleted - 1).getFirstName();
+				String deletedStudentLastName = ProjectRunner.studentList.get(studentToBeDeleted - 1).getLastName();
 
-				ArrayList<Student> studentList = new ArrayList<Student>();
+				ProjectRunner.studentList.remove(ProjectRunner.studentList.get(studentToBeDeleted - 1));
 
-				Scanner myFile = new Scanner(new File("studentList.txt"));
-
-				while (myFile.hasNext())
-					{
-						studentList.add(new Student(myFile.next(), myFile.next(), myFile.next(), myFile.next(),
-								myFile.next(), myFile.next(), myFile.next(), myFile.next(), 0.0));
-					}
-
-				for (int i = 0; i < studentList.size(); i++)
-					{
-						if (studentList.get(i).getFirstName().equals(firstName)
-								&& studentList.get(i).getLastName().equals(lastName))
-							{
-								studentList.remove(studentList.get(i));
-							}
-					}
-
-				System.out.println(firstName + " " + lastName + " successfully removed.");
+				// ProjectRunner.printList();
+				System.out.println(deletedStudentFirstName + " " + deletedStudentLastName + " successfully removed.");
 
 			}
 
